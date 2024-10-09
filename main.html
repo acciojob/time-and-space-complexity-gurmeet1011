@@ -8,6 +8,146 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<h1>Time and <b>Space Complexity</b></h1>
+	<p>
+		Time complexity is a way to describe the efficiency of an algorithm, particularly in terms of how the runtime of the algorithm increases as the size of the input increases. It's typically expressed using Big-O notation (e.g., O(n), O(log n), O(n²)), which gives an upper bound on the time required as a function of the input size.
+
+Key Concepts:
+Input Size (n): The size of the input, often referred to as 
+𝑛
+n. For example, if you're processing an array, 
+𝑛
+n is the number of elements in the array.
+
+Operations: These are the basic steps or instructions an algorithm performs, such as comparisons, swaps, or arithmetic operations. Time complexity measures how the number of these operations grows as 
+𝑛
+n increases.
+
+Worst-Case Time Complexity: The maximum time the algorithm could take for any input of size 
+𝑛
+n. This is usually the focus when discussing time complexity since it gives an upper limit on the runtime.
+
+Best-Case Time Complexity: The minimum time the algorithm could take for the most favorable input. This is less commonly discussed than the worst-case.
+
+Average-Case Time Complexity: The expected time for an average input, assuming a distribution of inputs.
+
+Common Time Complexities:
+O(1) — Constant Time:
+The runtime does not increase with the input size.
+Example: Accessing an element in an array by its index.
+
+O(log n) — Logarithmic Time:
+The runtime grows logarithmically as the input size increases.
+Example: Binary search, where each step halves the search space.
+
+O(n) — Linear Time:
+The runtime grows linearly with the input size.
+Example: Iterating through an array to find the maximum element.
+
+O(n log n) — Linearithmic Time:
+The runtime grows at a rate proportional to 
+𝑛
+×
+log
+⁡
+𝑛
+n×logn.
+Example: Efficient sorting algorithms like Merge Sort or Quick Sort (on average).
+
+O(n²) — Quadratic Time:
+The runtime grows quadratically as the input size increases.
+Example: Nested loops iterating over all pairs of elements, like in Bubble Sort.
+
+O(2ⁿ) — Exponential Time:
+The runtime doubles with each additional element in the input.
+Example: Solving the Traveling Salesman Problem using brute force.
+
+O(n!) — Factorial Time:
+The runtime grows factorially with the input size.
+Example: Generating all possible permutations of 
+𝑛
+n elements.
+
+Why is Time Complexity Important?
+It helps predict the scalability of algorithms for large inputs.
+It guides developers to choose the most efficient algorithm for a given problem, especially when performance matters.
+It’s a key concept in algorithm analysis, helping understand how changes in input size affect the runtime of the algorithm.
+Understanding time complexity is crucial for optimizing code, especially when working with large datasets or performance-critical applications.
+	</p>
+	
+		<b>Space Complexity</b>is a measure of the amount of memory an algorithm uses as a function of the input size. Similar to time complexity, it is typically expressed using Big-O notation (e.g., O(1), O(n), O(n²)), and it represents the maximum space an algorithm might require to execute.
+
+Key Concepts:
+Input Space: The memory needed to store the input data. For example, if the input is an array of size 
+𝑛
+n, it requires O(n) space.
+
+Auxiliary Space: The extra space or temporary space used by an algorithm beyond the input. This includes space for variables, data structures (like stacks, queues, or hashmaps), and recursive function call stacks.
+
+Total <b>Space Complexity</b>: This is the sum of input space and auxiliary space, but in Big-O notation, we usually focus on the auxiliary space since the input space is often fixed.
+
+Common Space Complexities:
+O(1) — Constant Space:
+The algorithm uses a fixed amount of memory, regardless of the input size.
+Example: Swapping two numbers or calculating the sum of an array using a single variable.
+
+O(n) — Linear Space:
+The memory usage grows linearly with the input size.
+Example: Storing an additional array or list of size 
+𝑛
+n during execution. Many iterative algorithms operate in O(n) space.
+
+O(log n) — Logarithmic Space:
+Memory usage grows logarithmically with the input size.
+Example: Recursive algorithms like binary search, where the depth of the recursion is proportional to 
+log
+⁡
+𝑛
+logn.
+
+O(n²) — Quadratic Space:
+The memory usage grows quadratically with the input size.
+Example: Storing a 2D matrix of size 
+𝑛
+×
+𝑛
+n×n.
+
+O(n!) — Factorial Space:
+The memory grows factorially with the input size.
+Example: Certain recursive algorithms, such as generating all permutations of 
+𝑛
+n elements.
+
+Key Considerations:
+Recursive Functions and Stack Space: Recursive algorithms often consume extra memory in the form of stack space, proportional to the depth of the recursion. For example, a recursive function that dives 
+𝑛
+n levels deep will use O(n) stack space.
+
+Data Structures: The choice of data structures affects <b>Space Complexity</b>. A linked list uses more space than an array due to additional pointers. Similarly, hashmaps, trees, and graphs can also add to <b>Space Complexity</b> depending on their size and structure.
+
+Trade-offs with Time Complexity: Sometimes there's a trade-off between time and space. For example, an algorithm can be optimized to use less time by using more memory (e.g., memoization in dynamic programming), or vice versa.
+
+Examples:
+Example 1: Iterating through an array to find the maximum element.
+
+<b>Space Complexity</b>: O(1), because only a few variables are used regardless of the array size.
+Example 2: Merge Sort algorithm.
+
+<b>Space Complexity</b>: O(n), because additional arrays are created during the merging process.
+Example 3: Recursive Fibonacci calculation.
+
+<b>Space Complexity</b>: O(n), because the recursion stack grows linearly with 
+𝑛
+n, holding 
+𝑛
+n function calls.
+Why is <b>Space Complexity</b>Important?
+Memory Efficiency: Understanding <b>Space Complexity</b> helps avoid excessive memory usage, especially in memory-constrained environments.
+System Performance: Algorithms with high <b>Space Complexity</b> may cause memory overflow or reduce system performance due to excessive use of resources.
+Scalability: Efficient space usage is critical when working with large datasets or real-time systems where both time and memory are limited.
+By analyzing <b>Space Complexity</b>, developers can ensure that their algorithms are optimized for both memory and performance, making them suitable for practical use.
+	</p>
     <script type="text/javascript" src="./script.js">
 </script>
 
